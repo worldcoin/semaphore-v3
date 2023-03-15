@@ -25,8 +25,6 @@ contract SemaphoreVerifier is ISemaphoreVerifier {
         uint256[8] calldata proof,
         uint256 merkleTreeDepth
     ) external view override {
-        signal = _hash(signal);
-
         Proof memory p;
 
         p.A = Pairing.G1Point(proof[0], proof[1]);
