@@ -26,7 +26,6 @@ contract SemaphoreVerifier is ISemaphoreVerifier {
         uint256 merkleTreeDepth
     ) external view override {
         signal = _hash(signal);
-        externalNullifier = _hash(externalNullifier);
 
         Proof memory p;
 

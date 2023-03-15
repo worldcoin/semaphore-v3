@@ -1,5 +1,5 @@
 //SPDX-License-Identifier: Unlicense
-pragma soliditypragma solidity ^0.8.4;
+pragma solidity ^0.8.4;
 
 import "@semaphore-protocol/contracts/interfaces/ISemaphore.sol";
 
