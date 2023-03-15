@@ -1,5 +1,5 @@
 //SPDX-License-Identifier: MIT
-pragma solidity 0.8.4;
+pragma solidity ^0.8.4;
 
 import "../interfaces/ISemaphoreVerifier.sol";
 
@@ -25,9 +25,6 @@ contract SemaphoreVerifier is ISemaphoreVerifier {
         uint256[8] calldata proof,
         uint256 merkleTreeDepth
     ) external view override {
-        signal = _hash(signal);
-        externalNullifier = _hash(externalNullifier);
-
         Proof memory p;
 
         p.A = Pairing.G1Point(proof[0], proof[1]);
