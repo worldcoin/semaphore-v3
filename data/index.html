@@ -1,0 +1,104 @@
+<!DOCTYPE html><html class="default"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>@semaphore-protocol/data</title><meta name="description" content="Documentation for @semaphore-protocol/data"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem("tsd-theme") || "os")</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">@semaphore-protocol/data</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>@semaphore-protocol/data </h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography"><p align="center">
+    <h1 align="center">
+        Semaphore data
+    </h1>
+    <p align="center">A library to query Semaphore contracts.</p>
+</p>
+
+<p align="center">
+    <a href="https://github.com/semaphore-protocol">
+        <img src="https://img.shields.io/badge/project-Semaphore-blue.svg?style=flat-square">
+    </a>
+    <a href="https://github.com/semaphore-protocol/semaphore/blob/main/LICENSE">
+        <img alt="Github license" src="https://img.shields.io/github/license/semaphore-protocol/semaphore.svg?style=flat-square">
+    </a>
+    <a href="https://www.npmjs.com/package/@semaphore-protocol/data">
+        <img alt="NPM version" src="https://img.shields.io/npm/v/@semaphore-protocol/data?style=flat-square" />
+    </a>
+    <a href="https://npmjs.org/package/@semaphore-protocol/data">
+        <img alt="Downloads" src="https://img.shields.io/npm/dm/@semaphore-protocol/data.svg?style=flat-square" />
+    </a>
+    <a href="https://eslint.org/">
+        <img alt="Linter eslint" src="https://img.shields.io/badge/linter-eslint-8080f2?style=flat-square&logo=eslint" />
+    </a>
+    <a href="https://prettier.io/">
+        <img alt="Code style prettier" src="https://img.shields.io/badge/code%20style-prettier-f8bc45?style=flat-square&logo=prettier" />
+    </a>
+</p>
+
+<div align="center">
+    <h4>
+        <a href="https://github.com/semaphore-protocol/semaphore/blob/main/CONTRIBUTING.md">
+            👥 Contributing
+        </a>
+        <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <a href="https://github.com/semaphore-protocol/semaphore/blob/main/CODE_OF_CONDUCT.md">
+            🤝 Code of conduct
+        </a>
+        <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <a href="https://github.com/semaphore-protocol/semaphore/contribute">
+            🔎 Issues
+        </a>
+        <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <a href="https://semaphore.appliedzkp.org/discord">
+            🗣️ Chat &amp; Support
+        </a>
+    </h4>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>This library allows you to query the <a href="https://github.com/semaphore-protocol/semaphore/blob/main/contracts/Semaphore.sol"><code>Semaphore.sol</code></a> contract data (i.e. groups) using the <a href="https://github.com/semaphore-protocol/subgraph">Semaphore subgraph</a> or Ethers. It can be used on Node.js and browsers.</th>
+</tr>
+</thead>
+</table>
+
+<a href="#🛠-install" id="🛠-install" style="color: inherit; text-decoration: none;">
+  <h2>🛠 Install</h2>
+</a>
+
+<a href="#npm-or-yarn" id="npm-or-yarn" style="color: inherit; text-decoration: none;">
+  <h3>npm or yarn</h3>
+</a>
+<p>Install the <code>@semaphore-protocol/data</code> package with npm:</p>
+<pre><code class="language-bash"><span class="hl-0">npm i @semaphore-protocol/data</span>
+</code></pre>
+<p>or yarn:</p>
+<pre><code class="language-bash"><span class="hl-0">yarn add @semaphore-protocol/data</span>
+</code></pre>
+
+<a href="#📜-usage" id="📜-usage" style="color: inherit; text-decoration: none;">
+  <h2>📜 Usage</h2>
+</a>
+<p># <strong>new SemaphoreSubgraph</strong>(networkOrSubgraphURL: <em>Network</em> | <em>string</em> = &quot;goerli&quot;): <em>SemaphoreSubgraph</em></p>
+<pre><code class="language-typescript"><span class="hl-1">import</span><span class="hl-0"> { </span><span class="hl-2">SemaphoreSubgraph</span><span class="hl-0"> } </span><span class="hl-1">from</span><span class="hl-0"> </span><span class="hl-3">&quot;@semaphore-protocol/data&quot;</span><br/><br/><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">semaphoreSubgraph</span><span class="hl-0"> = </span><span class="hl-4">new</span><span class="hl-0"> </span><span class="hl-6">SemaphoreSubgraph</span><span class="hl-0">()</span><br/><br/><span class="hl-7">// or:</span><br/><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">semaphoreSubgraph</span><span class="hl-0"> = </span><span class="hl-4">new</span><span class="hl-0"> </span><span class="hl-6">SemaphoreSubgraph</span><span class="hl-0">(</span><span class="hl-3">&quot;arbitrum&quot;</span><span class="hl-0">)</span><br/><br/><span class="hl-7">// or:</span><br/><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">semaphoreSubgraph</span><span class="hl-0"> = </span><span class="hl-4">new</span><span class="hl-0"> </span><span class="hl-6">SemaphoreSubgraph</span><span class="hl-0">(</span><br/><span class="hl-0">    </span><span class="hl-3">&quot;https://api.studio.thegraph.com/query/14377/&lt;your-subgraph&gt;/&lt;your-version&gt;&quot;</span><br/><span class="hl-0">)</span>
+</code></pre>
+<p># <strong>getGroupIds</strong>(): <em>Promise&lt;string[]&gt;</em></p>
+<pre><code class="language-typescript"><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">groupIds</span><span class="hl-0"> = </span><span class="hl-1">await</span><span class="hl-0"> </span><span class="hl-2">semaphoreSubgraph</span><span class="hl-0">.</span><span class="hl-6">getGroupIds</span><span class="hl-0">()</span>
+</code></pre>
+<p># <strong>getGroups</strong>(options?: <em>GroupOptions</em>): <em>Promise&lt;GroupResponse[]&gt;</em></p>
+<pre><code class="language-typescript"><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">groups</span><span class="hl-0"> = </span><span class="hl-1">await</span><span class="hl-0"> </span><span class="hl-2">semaphoreSubgraph</span><span class="hl-0">.</span><span class="hl-6">getGroups</span><span class="hl-0">()</span><br/><br/><span class="hl-7">// or</span><br/><br/><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">groups</span><span class="hl-0"> = </span><span class="hl-1">await</span><span class="hl-0"> </span><span class="hl-2">semaphoreSubgraph</span><span class="hl-0">.</span><span class="hl-6">getGroups</span><span class="hl-0">({ </span><span class="hl-2">members:</span><span class="hl-0"> </span><span class="hl-4">true</span><span class="hl-0">, </span><span class="hl-2">verifiedProofs:</span><span class="hl-0"> </span><span class="hl-4">true</span><span class="hl-0"> })</span>
+</code></pre>
+<p># <strong>getGroup</strong>(groupId: <em>string</em>, options?: <em>GroupOptions</em>): <em>Promise&lt;GroupResponse&gt;</em></p>
+<pre><code class="language-typescript"><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">group</span><span class="hl-0"> = </span><span class="hl-1">await</span><span class="hl-0"> </span><span class="hl-2">semaphoreSubgraph</span><span class="hl-0">.</span><span class="hl-6">getGroup</span><span class="hl-0">(</span><span class="hl-3">&quot;42&quot;</span><span class="hl-0">)</span><br/><br/><span class="hl-7">// or</span><br/><br/><span class="hl-4">const</span><span class="hl-0"> { </span><span class="hl-5">members</span><span class="hl-0">, </span><span class="hl-5">verifiedProofs</span><span class="hl-0"> } = </span><span class="hl-2">semaphoreSubgraph</span><span class="hl-0">.</span><span class="hl-6">getGroup</span><span class="hl-0">(</span><span class="hl-3">&quot;42&quot;</span><span class="hl-0">, { </span><span class="hl-2">members:</span><span class="hl-0"> </span><span class="hl-4">true</span><span class="hl-0">, </span><span class="hl-2">verifiedProofs:</span><span class="hl-0"> </span><span class="hl-4">true</span><span class="hl-0"> })</span>
+</code></pre>
+<p># <strong>new Ethers</strong>(networkOrEthereumURL: Network | string = &quot;goerli&quot;, options: EthersOptions = {}): <em>SemaphoreEthers</em></p>
+<pre><code class="language-typescript"><span class="hl-1">import</span><span class="hl-0"> { </span><span class="hl-2">SemaphoreEthers</span><span class="hl-0"> } </span><span class="hl-1">from</span><span class="hl-0"> </span><span class="hl-3">&quot;@semaphore-protocol/data&quot;</span><br/><br/><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">semaphoreEthers</span><span class="hl-0"> = </span><span class="hl-4">new</span><span class="hl-0"> </span><span class="hl-6">SemaphoreEthers</span><span class="hl-0">()</span><br/><br/><span class="hl-7">// or:</span><br/><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">semaphoreEthers</span><span class="hl-0"> = </span><span class="hl-4">new</span><span class="hl-0"> </span><span class="hl-6">SemaphoreEthers</span><span class="hl-0">(</span><span class="hl-3">&quot;homestead&quot;</span><span class="hl-0">, {</span><br/><span class="hl-0">    </span><span class="hl-2">address:</span><span class="hl-0"> </span><span class="hl-3">&quot;semaphore-address&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-2">startBlock:</span><span class="hl-0"> </span><span class="hl-8">0</span><br/><span class="hl-0">})</span><br/><br/><span class="hl-7">// or:</span><br/><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">semaphoreEthers</span><span class="hl-0"> = </span><span class="hl-4">new</span><span class="hl-0"> </span><span class="hl-6">SemaphoreEthers</span><span class="hl-0">(</span><span class="hl-3">&quot;http://localhost:8545&quot;</span><span class="hl-0">, {</span><br/><span class="hl-0">    </span><span class="hl-2">address:</span><span class="hl-0"> </span><span class="hl-3">&quot;semaphore-address&quot;</span><br/><span class="hl-0">})</span>
+</code></pre>
+<p># <strong>getGroupIds</strong>(): <em>Promise&lt;string[]&gt;</em></p>
+<pre><code class="language-typescript"><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">groupIds</span><span class="hl-0"> = </span><span class="hl-1">await</span><span class="hl-0"> </span><span class="hl-2">semaphoreEthers</span><span class="hl-0">.</span><span class="hl-6">getGroupIds</span><span class="hl-0">()</span>
+</code></pre>
+<p># <strong>getGroup</strong>(groupId: <em>string</em>): <em>Promise&lt;GroupResponse&gt;</em></p>
+<pre><code class="language-typescript"><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">group</span><span class="hl-0"> = </span><span class="hl-1">await</span><span class="hl-0"> </span><span class="hl-2">semaphoreEthers</span><span class="hl-0">.</span><span class="hl-6">getGroup</span><span class="hl-0">(</span><span class="hl-3">&quot;42&quot;</span><span class="hl-0">)</span>
+</code></pre>
+<p># <strong>getGroupAdmin</strong>(groupId: <em>string</em>): <em>Promise&lt;string&gt;</em></p>
+<pre><code class="language-typescript"><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">admin</span><span class="hl-0"> = </span><span class="hl-1">await</span><span class="hl-0"> </span><span class="hl-2">semaphoreEthers</span><span class="hl-0">.</span><span class="hl-6">getGroupAdmin</span><span class="hl-0">(</span><span class="hl-3">&quot;42&quot;</span><span class="hl-0">)</span>
+</code></pre>
+<p># <strong>getGroupMembers</strong>(groupId: <em>string</em>): <em>Promise&lt;string[]&gt;</em></p>
+<pre><code class="language-typescript"><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">members</span><span class="hl-0"> = </span><span class="hl-1">await</span><span class="hl-0"> </span><span class="hl-2">semaphoreEthers</span><span class="hl-0">.</span><span class="hl-6">getGroupMembers</span><span class="hl-0">(</span><span class="hl-3">&quot;42&quot;</span><span class="hl-0">)</span>
+</code></pre>
+<p># <strong>getGroupVerifiedProofs</strong>(groupId: <em>string</em>): <em>Promise&lt;any[]&gt;</em></p>
+<pre><code class="language-typescript"><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">verifiedProofs</span><span class="hl-0"> = </span><span class="hl-1">await</span><span class="hl-0"> </span><span class="hl-2">semaphoreEthers</span><span class="hl-0">.</span><span class="hl-6">getGroupVerifiedProofs</span><span class="hl-0">()</span>
+</code></pre>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul><li class="tsd-kind-class"><a href="classes/SemaphoreEthers.html" class="tsd-kind-icon">Semaphore<wbr/>Ethers</a></li><li class="tsd-kind-class"><a href="classes/SemaphoreSubgraph.html" class="tsd-kind-icon">Semaphore<wbr/>Subgraph</a></li><li class="tsd-kind-type-alias"><a href="modules.html#EthersOptions" class="tsd-kind-icon">Ethers<wbr/>Options</a></li><li class="tsd-kind-type-alias"><a href="modules.html#GroupOptions" class="tsd-kind-icon">Group<wbr/>Options</a></li><li class="tsd-kind-type-alias"><a href="modules.html#GroupResponse" class="tsd-kind-icon">Group<wbr/>Response</a></li><li class="tsd-kind-type-alias"><a href="modules.html#Network" class="tsd-kind-icon">Network</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li><li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>
